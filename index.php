@@ -91,6 +91,7 @@ function search() {
     {
       link = "https://www.youtube.com/watch?v="+jsonObj.items[i].id.videoId
       html += "<br><a href =\""+link+"\">"+jsonObj.items[i].snippet.title+"</a>";
+      html += "<img src=\""+jsonObj.items[i].snippet.thumbnails.default.url+"\"></img>"
     }
     }
     $('#search-container').html('<pre>' + html + '</pre>');
